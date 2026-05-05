@@ -157,5 +157,26 @@
         "metacritic": 96,
         "price": 59.99,
         "developer": "Larian Studios"
+    },
+    "Subway Surfers": {
+        "name": "Subway Surfers",
+        "tags": [
+            "None"
+        ],
+        "release_year": "2011",
+        "metacritic": "89",
+        "price": "0",
+        "developer": "None"
+    },
+    "Agario": {
+        "name": "Agario",
+        "tags": [
+            "IO Game",
+            "PvP"
+        ],
+        "release_year": 2015,
+        "metacritic": 82.0,
+        "price": 0.0,
+        "developer": "Miniclip"
     }
 }

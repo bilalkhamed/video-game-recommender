@@ -56,11 +56,18 @@ while True:
      ).ask()
 
      if filter == 'Minimum metacritic score':
-        score = int(questionary.text('Enter the minimum score:').ask())
-        min_metacritic(score, database)
+        try:  
+         score = int(questionary.text('Enter the minimum score:').ask())
+         min_metacritic(score, database)
+        except:
+           console.print('Invalid input. Metacritic score must be a number', style='red')
      else:
-        price = int(questionary.text('Enter the maximum price:').ask())
-        max_price(price, database)
+        try:
+         price = int(questionary.text('Enter the maximum price:').ask())
+         max_price(price, database)
+        except:
+           console.print('Invalid input. Price must be a number', style='red')
+           
     
   elif choice == 'Add a new game':
      add_game()

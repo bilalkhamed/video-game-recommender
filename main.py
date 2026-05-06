@@ -64,6 +64,7 @@ while True:
     
   elif choice == 'Add a new game':
      add_game()
+     database = load_data('games_database.json')
      
   elif choice == 'Exit': 
      console.print('Exiting the video game reccomender. See you again!')

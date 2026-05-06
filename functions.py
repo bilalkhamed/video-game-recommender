@@ -60,7 +60,18 @@ def max_price(maximum,data):
        
 def recommend_game(game_name, data):
     dic = {}
+
+    # check if the tags is None or an empty list
+    if data[game_name].tags is None or data[game_name].tags == []:
+        console.print('This game has no tags.', style='red')
+        return
+
     for game in data:
+
+        # skip the games which do not have tags
+        if data[game].tags is None or data[game].tags == []:
+            continue
+        
         intersect = set([tag.lower() for tag in data[game_name].tags]) & set([tag.lower() for tag in data[game].tags])
         union = set([tag.lower() for tag in data[game_name].tags]) | set([tag.lower() for tag in data[game].tags])
         jaccard = len(intersect) / len(union)
